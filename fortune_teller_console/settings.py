@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    'console.apps.ConsoleConfig'
+    'line.apps.LineConfig'
 ]
 
 MIDDLEWARE = [
@@ -77,8 +77,11 @@ WSGI_APPLICATION = 'fortune_teller_console.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'postgres',
+        'USER': 'postgres',
+        'PASSWORD': '0502',
+        'HOST': '172.17.0.2',
     }
 }
 
