@@ -1,5 +1,5 @@
 from django.db import models
-from django.db.models import CharField
+from django.db.models import CharField, AutoField
 
 
 # line_channel table
@@ -18,6 +18,7 @@ class Message(models.Model):
 
 # line_user table
 class User(models.Model):
+    id = AutoField(primary_key = True, auto_created = True, default = 1000)
     channel_id = CharField(max_length = 64)
     user_id = CharField(max_length = 256)
     name = CharField(max_length = 256)
@@ -25,4 +26,3 @@ class User(models.Model):
     birth_day = CharField(max_length = 16)
     birth_time = CharField(max_length = 16)
     status = CharField(max_length = 16)
-    fate_num = CharField(max_length = 16)
