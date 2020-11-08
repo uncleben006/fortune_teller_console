@@ -1,0 +1,1 @@
+ALTER SEQUENCE public.line_user_id_seq RESTART WITH 1234;
